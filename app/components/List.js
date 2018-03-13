@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import { render } from 'react-dom'
+import React from 'react'
 
 function List (props) {
   const { pokemon, location } = props
   const { ability } = location.match.params
   return (
     <div>
-      <h2>${ability}</h2>
+      <h2>{ability}</h2>
       <ul>
         {
           pokemon.map(cur => {
