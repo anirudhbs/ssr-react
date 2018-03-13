@@ -4,7 +4,6 @@ import { render } from 'react-dom'
 function List (props) {
   const { pokemon, location } = props
   const { ability } = location.match.params
-
   return (
     <div>
       <h2>Ability</h2>

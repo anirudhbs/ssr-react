@@ -9,23 +9,17 @@ import {
 import List from './List'
 import Home from './Home'
 
-class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {}
-  }
-
-  render () {
-    const { pokemon } = this.props
-    return (
+export default function App (props) {
+  const { pokemon } = props
+  return (
+    <div>
+      Lil Wayne
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/pokemon' render={() => (<Redirect to='/pokemon/ability/telepathy' />)} />
-        <Route path='/pokemon/ability/:ability' render={(location) => (<List pokemon={pokemon.list}
-          location={location} />)} />
+        <Route path='/' exact component={Home} /> 
+        <Route path='/pokemon' exact render={() => (<Redirect to='/pokemon/ability/telepathy' />)} />
+        <Route path='/pokemon/ability/:ability' render={(location) =>
+          (<List pokemon={pokemon.list} location={location} />)} />
       </Switch>
-    )
-  }
+    </div>
+  )
 }
-
-export default App
