@@ -6,7 +6,7 @@ function List (props) {
   const { ability } = location.match.params
   return (
     <div>
-      <h2>Ability</h2>
+      <h2>${ability}</h2>
       <ul>
         {
           pokemon.map(cur => {
