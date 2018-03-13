@@ -4,7 +4,7 @@ import { render } from 'react-dom'
 class Home extends Component {
   render () {
     return (
-      <div>Home Component</div>
+      <div>You are now in the Home Page</div>
     )
   }
 }
