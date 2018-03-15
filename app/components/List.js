@@ -1,8 +1,9 @@
 import React from 'react'
 
-function List (props) {
-  const { pokemon, location } = props
-  const { ability } = location.match.params
+class List extends React.Component {
+  render () {
+  const { pokemon, location } = this.props
+  const { ability } = this.props.location.match.params
   return (
     <div>
       <h2>{ability}</h2>
@@ -16,5 +17,7 @@ function List (props) {
       </ul>
     </div>
   )
+  }
 }
+
 export default List
